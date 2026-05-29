@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            btnCargar = new Button();
+            tbMonto = new TextBox();
             tbDNI = new TextBox();
             tbNombre = new TextBox();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            tbMonto = new TextBox();
-            btnCargar = new Button();
+            btnVerExpedientes = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -54,6 +55,23 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Registrar Datos";
+            // 
+            // btnCargar
+            // 
+            btnCargar.Location = new Point(489, 77);
+            btnCargar.Name = "btnCargar";
+            btnCargar.Size = new Size(75, 23);
+            btnCargar.TabIndex = 1;
+            btnCargar.Text = "Cargar";
+            btnCargar.UseVisualStyleBackColor = true;
+            btnCargar.Click += btnCargar_Click;
+            // 
+            // tbMonto
+            // 
+            tbMonto.Location = new Point(169, 107);
+            tbMonto.Name = "tbMonto";
+            tbMonto.Size = new Size(237, 23);
+            tbMonto.TabIndex = 5;
             // 
             // tbDNI
             // 
@@ -96,28 +114,22 @@
             label1.TabIndex = 0;
             label1.Text = "Nombre:";
             // 
-            // tbMonto
+            // btnVerExpedientes
             // 
-            tbMonto.Location = new Point(169, 107);
-            tbMonto.Name = "tbMonto";
-            tbMonto.Size = new Size(237, 23);
-            tbMonto.TabIndex = 5;
-            // 
-            // btnCargar
-            // 
-            btnCargar.Location = new Point(489, 77);
-            btnCargar.Name = "btnCargar";
-            btnCargar.Size = new Size(75, 23);
-            btnCargar.TabIndex = 1;
-            btnCargar.Text = "Cargar";
-            btnCargar.UseVisualStyleBackColor = true;
-            btnCargar.Click += btnCargar_Click;
+            btnVerExpedientes.Location = new Point(353, 488);
+            btnVerExpedientes.Name = "btnVerExpedientes";
+            btnVerExpedientes.Size = new Size(108, 23);
+            btnVerExpedientes.TabIndex = 1;
+            btnVerExpedientes.Text = "Ver Expedientes";
+            btnVerExpedientes.UseVisualStyleBackColor = true;
+            btnVerExpedientes.Click += btnVerExpedientes_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 538);
+            Controls.Add(btnVerExpedientes);
             Controls.Add(groupBox1);
             Name = "Form1";
             Text = "Form1";
@@ -136,5 +148,6 @@
         private TextBox tbNombre;
         private Button btnCargar;
         private TextBox tbMonto;
+        private Button btnVerExpedientes;
     }
 }

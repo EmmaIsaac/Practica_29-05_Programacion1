@@ -10,6 +10,7 @@ namespace Ejercicio
         }
 
         ExpedienteService expedienteService = new ExpedienteService();
+        Form2 formulario2 = new Form2();
         private void btnCargar_Click(object sender, EventArgs e)
         {
             string nombre = tbNombre.Text;
@@ -23,6 +24,11 @@ namespace Ejercicio
             tbMonto.Text = "";
 
 
+        }
+
+        private void btnVerExpedientes_Click(object sender, EventArgs e)
+        {
+            formulario2.ShowDialog();
         }
     }
 }
